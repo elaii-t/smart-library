@@ -2,94 +2,123 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Умная Библиотека</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Library</title>
     <style>
-        /* 1. ЦВЕТА И ШРИФТЫ */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', sans-serif;
             margin: 0;
-            background-color: #f4f4f9;
-            color: #333;
+            background-color: #ffffff; /* Белый фон */
+            color: #444;
         }
 
+        /* Шапка с поиском как на рисунке */
         header {
-            background-color: #2c3e50; /* Темный графит */
-            color: white;
-            padding: 2rem;
-            text-align: center;
+            padding: 15px;
+            background-color: #e3f2fd; /* Нежно-голубой */
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
         }
 
-        /* 2. ШАБЛОН ИНТЕРФЕЙСА */
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
+        .search-bar {
             background: white;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            padding: 10px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            color: #aaa;
+        }
+
+        /* Контейнер для категорий */
+        .container {
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            color: #555;
+            margin-top: 25px;
+        }
+
+        /* Лента книг (горизонтальная) */
+        .book-row {
+            display: flex;
+            overflow-x: auto;
+            gap: 15px;
+            padding: 10px 0;
         }
 
         .book-card {
-            border-left: 5px solid #d4a5b2; /* Акцентный цвет */
-            padding: 15px;
-            margin-bottom: 15px;
-            background: #fffafa;
-            transition: 0.3s;
-        }
-
-        .book-card:hover {
-            transform: translateX(10px);
-        }
-
-        button {
-            background-color: #d4a5b2;
-            border: none;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 20px;
-            cursor: pointer;
-        }
-
-        footer {
-            text-align: center;
+            min-width: 100px;
+            height: 140px;
+            background-color: #fce4ec; /* Нежно-розовый */
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-size: 0.8rem;
-            margin-top: 50px;
-            color: #888;
+            text-align: center;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            border: 1px solid #f8bbd0;
+        }
+
+        /* Нижнее меню (как на рисунке) */
+        nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 15px 0;
+            border-top: 1px solid #eee;
+        }
+
+        .nav-icon {
+            font-size: 1.5rem;
+            color: #d4a5b2;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Smart Library</h1>
-    <p>Твой гид в мире знаний</p>
+    <div class="search-bar">
+        🔍 Поиск
+    </div>
 </header>
 
 <div class="container">
-    <h2>Мои книги</h2>
-    
-    <div class="book-card">
-        <h3>Основы дизайна</h3>
-        <p>Краткое описание того, как работают цвета и композиция.</p>
-        <button>Читать</button>
+    <h2>Детективы</h2>
+    <div class="book-row">
+        <div class="book-card">Шерлок Холмс</div>
+        <div class="book-card">Убийство в Восточном экспрессе</div>
+        <div class="book-card">Черный кот</div>
     </div>
 
-    <div class="book-card">
-        <h3>История Бишкека</h3>
-        <p>Интересные факты о нашем любимом городе.</p>
-        <button>Читать</button>
+    <h2>Романтика</h2>
+    <div class="book-row">
+        <div class="book-card">Гордость и предубеждение</div>
+        <div class="book-card">Сумерки</div>
+        <div class="book-card">Маленькие женщины</div>
     </div>
 
-    <div class="book-card">
-        <h3>Нейросети в 2026</h3>
-        <p>Как ИИ помогает нам учиться и создавать проекты.</p>
-        <button>Читать</button>
+    <h2>Психология</h2>
+    <div class="book-row">
+        <div class="book-card">Сила привычки</div>
+        <div class="book-card">Тонкое искусство пофигизма</div>
+        <div class="book-card">Игры, в которые играют люди</div>
     </div>
 </div>
 
-<footer>
-    <p>&copy; 2026 Разработано в Школе №3</p>
-</footer>
+<div style="height: 80px;"></div> <nav>
+    <span class="nav-icon">📋</span>
+    <span class="nav-icon">🏠</span>
+    <span class="nav-icon">⭐</span>
+</nav>
 
 </body>
 </html>
